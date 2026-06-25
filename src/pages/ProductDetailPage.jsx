@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { getProductImage } from "../api/config";
+import { API_BASE_URL, getProductImage } from "../api/config";
 import { formatPrice } from "../utils/format";
 import { sizeOptionsFallback } from "../data/constants";
 
@@ -20,7 +20,7 @@ export default function ProductDetailPage({ addToCart }) {
       try {
         setIsLoading(true);
         setFetchError(null);
-        const res = await fetch(`http://127.0.0.1:8000/api/products/${id}`);
+        const res = await fetch(`${API_BASE_URL}/api/products/${id}`);
         if (!res.ok) throw new Error(`Couldn't load this piece (status ${res.status})`);
         const json = await res.json();
         setProduct(json.data ?? null);

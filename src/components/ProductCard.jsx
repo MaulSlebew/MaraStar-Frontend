@@ -1,10 +1,10 @@
 import React from "react";
+import { STORAGE_URL } from "../api/config";
 
 export default function ProductCard({ product, onSelect }) {
   // Fallback url jika gambar kosong atau bermasalah
   const FALLBACK_IMAGE =
     "https://placehold.co/800x1000/e4e4e7/a1a1aa?text=NO+IMAGE";
-  const STORAGE_URL = "http://127.0.0.1:8000/storage/";
 
   // Helper local (sementara sebelum utilitas dipisah)
   const formatPriceLocal = (value) => {

@@ -1,12 +1,12 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { STORAGE_URL } from "../api/config";
 
 export default function HeroSection({ products }) {
   const navigate = useNavigate();
   const heroProduct = products?.[0];
   const FALLBACK_IMAGE =
     "https://placehold.co/800x1000/e4e4e7/a1a1aa?text=NO+IMAGE";
-  const STORAGE_URL = "http://127.0.0.1:8000/storage/";
 
   const formatPriceLocal = (value) => {
     const number = Number(value) || 0;

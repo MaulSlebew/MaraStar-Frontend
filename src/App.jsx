@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route, useSearchParams } from "react-router-dom";
-import { API_PRODUCTS_URL } from "./api/config";
+import { API_PRODUCTS_URL, STORAGE_URL } from "./api/config";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -53,7 +53,7 @@ function AppContent() {
           nama_produk: product.nama_produk,
           harga: product.harga,
           ukuran: size,
-          gambar: product.images?.[0]?.image_url ? `${new URL(API_PRODUCTS_URL).origin}/storage/${product.images[0].image_url}` : null,
+          gambar: product.images?.[0]?.image_url ? `${STORAGE_URL}${product.images[0].image_url}` : null,
           jumlah: 1,
         };
         return [...prevItems, newItem];
