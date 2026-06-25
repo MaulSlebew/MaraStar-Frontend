@@ -1,4 +1,7 @@
-export const API_BASE_URL = "dashboard-blablablacloth.up.railway.app/api";
+// Pastikan pakai https:// dan hilangkan /api di baris pertama ini
+export const API_BASE_URL = "https://dashboard-blablablacloth.up.railway.app"; 
+
+// Baru di baris ini kita arahkan ke /api/products
 export const API_PRODUCTS_URL = `${API_BASE_URL}/api/products`;
 export const STORAGE_URL = `${API_BASE_URL}/storage/`;
 
