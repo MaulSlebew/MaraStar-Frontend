@@ -1,4 +1,4 @@
-export const API_BASE_URL = "dashboard-blablablacloth.up.railway.app";
+export const API_BASE_URL = "dashboard-blablablacloth.up.railway.app/api";
 export const API_PRODUCTS_URL = `${API_BASE_URL}/api/products`;
 export const STORAGE_URL = `${API_BASE_URL}/storage/`;
 
