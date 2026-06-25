@@ -1,0 +1,1 @@
+export const sizeOptionsFallback = ["M", "L", "XL"];
